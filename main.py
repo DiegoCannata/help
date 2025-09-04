@@ -42,7 +42,8 @@ st.markdown(
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+        margin-top: 0px;
     }
 
     /* Mejorar la legibilidad del texto */
@@ -183,11 +184,11 @@ img2_exists = os.path.exists(img2_path)
 
 st.markdown('<div class="image-container">', unsafe_allow_html=True)
 if img1_exists and img2_exists:
-    col_img1, col_img2 = st.columns([1, 1])
+    col_img1, col_img2 = st.columns([2, 1])
     with col_img1:
-        st.image(img1_path, width=300)
+        st.image(img1_path, width=500)
     with col_img2:
-        st.image(img2_path, width=300)
+        st.image(img2_path, width=180)
 elif img1_exists:
     st.image(img1_path, use_column_width=True)
 elif img2_exists:
@@ -201,7 +202,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # Mensaje principal mejorado
 st.markdown("""
-<div style='margin-bottom: 30px;'>
+<div style='margin-bottom: 18px;'>
     <h1 style='font-size: 2.5rem; margin-bottom: 10px;'>✨ Analizador de Sentimientos</h1>
     <p style='font-size: 1.2rem;'>Descubre el sentimiento detrás de cualquier texto con tecnología de inteligencia artificial</p>
 </div>
